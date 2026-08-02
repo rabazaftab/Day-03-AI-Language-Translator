@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AI Translator</title>
+
+    <link rel="stylesheet"
+          href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="header">
+
+        <div class="logo">
+            🌐
+        </div>
+
+        <div>
+            <h1>AI Translator</h1>
+            <p>Translate text naturally with AI</p>
+        </div>
+
+    </header>
+
+
+    <main class="translator-card">
+
+        <div class="language-row">
+
+            <div class="language-box">
+
+                <label for="sourceLanguage">
+                    From
+                </label>
+
+                <select id="sourceLanguage">
+
+                    <option>English</option>
+                    <option>Urdu</option>
+                    <option>Arabic</option>
+                    <option>French</option>
+                    <option>Spanish</option>
+                    <option>German</option>
+                    <option>Chinese</option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="swap-button"
+                onclick="swapLanguages()"
+                title="Swap languages">
+
+                ⇄
+
+            </button>
+
+
+            <div class="language-box">
+
+                <label for="targetLanguage">
+                    To
+                </label>
+
+                <select id="targetLanguage">
+
+                    <option>Urdu</option>
+                    <option>English</option>
+                    <option>Arabic</option>
+                    <option>French</option>
+                    <option>Spanish</option>
+                    <option>German</option>
+                    <option>Chinese</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <div class="translation-area">
+
+            <div class="input-section">
+
+                <div class="section-header">
+
+                    <span>Original Text</span>
+
+                    <span id="charCount">
+                        0 / 5000
+                    </span>
+
+                </div>
+
+                <textarea
+                    id="inputText"
+                    maxlength="5000"
+                    placeholder="Type or paste your text here...">
+                </textarea>
+
+            </div>
+
+
+            <div class="output-section">
+
+                <div class="section-header">
+
+                    <span>Translation</span>
+
+                    <span id="status">
+                    </span>
+
+                </div>
+
+                <div
+                    id="translationOutput"
+                    class="translation-output">
+
+                    Your translation will appear here.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="actions">
+
+            <button
+                id="translateButton"
+                class="translate-button"
+                onclick="translateText()">
+
+                Translate
+
+            </button>
+
+            <button
+                class="secondary-button"
+                onclick="copyTranslation()">
+
+                Copy
+
+            </button>
+
+            <button
+                class="secondary-button"
+                onclick="clearText()">
+
+                Clear
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Powered by OpenRouter AI
+        </p>
+
+    </footer>
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
